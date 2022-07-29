@@ -7,9 +7,12 @@ let rec print (e: expr list): unit =
   match e with
   | EConst (CInt i) :: tl ->
     Printf.printf "%d" i;
+    Printf.printf " ";
     print tl
   | EConst (CStr s) :: tl ->
     Printf.printf "%s" s;
+    if String.get s (String.length s -1) <> '\n' then
+      Printf.printf " ";
     print tl
   | [] -> Printf.printf "\n"
   (* | _ -> error "Failed to print this value";; *)

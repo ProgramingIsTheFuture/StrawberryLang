@@ -7,6 +7,20 @@
 expr:
   | c = CST
     { EConst c }
+  | LPARENT e1 = expr RPARENT
+    { e1 }
+  | SUB e1 = expr
+    { EOp (Neg e1) }
+  | e1 = expr ADD e2 = expr
+    { EOp (Add (e1, e2)) }
+  | e1 = expr SUB e2 = expr
+    { EOp (Sub (e1, e2)) }
+  | e1 = expr MUL e2 = expr
+    { EOp (Mul (e1, e2)) }
+  | e1 = expr DIV e2 = expr
+    { EOp (Div (e1, e2)) }
+  | e1 = expr MOD e2 = expr
+    { EOp (Mod (e1, e2)) }
 
 params:
   | COMMA e = expr

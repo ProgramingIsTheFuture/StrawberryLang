@@ -17,11 +17,22 @@ rule tokens = parse
     { PRINT }
   | ['0'-'9']+ as s
     { CST (CInt (int_of_string s)) }
-  | '"'     { CST (CStr (string lexbuf)) }
+  | '"'     
+    { CST (CStr (string lexbuf)) }
   | ','
     { COMMA }
   | '('
     { LPARENT }
+  | '+'
+    { ADD }
+  | '-'
+    { SUB }
+  | '/'
+    { DIV }
+  | '*'
+    { MUL }
+  | '%' 
+    { MOD }
   | ')'
     { RPARENT }
   | eof

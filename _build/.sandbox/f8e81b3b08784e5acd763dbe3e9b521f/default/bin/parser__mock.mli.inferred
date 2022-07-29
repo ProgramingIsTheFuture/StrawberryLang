@@ -1,7 +1,0 @@
-type token = Tokens.token
-val menhir_begin_marker : int
-val xv_stmt : Ast.stmt
-val xv_main : Ast.main
-val xv_list_stmt_ : Ast.main
-val xv_expr : Ast.expr
-val menhir_end_marker : int

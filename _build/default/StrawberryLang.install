@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/StrawberryLang/META"
+  "_build/install/default/lib/StrawberryLang/dune-package"
+  "_build/install/default/lib/StrawberryLang/opam"
+]
+bin: [
+  "_build/install/default/bin/StrawberryLang"
+]

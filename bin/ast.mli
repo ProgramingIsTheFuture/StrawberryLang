@@ -3,7 +3,6 @@ type constant =
   | CStr of string
 
 type operator =
-  | Neg of constant 
   | Add of expr * expr
   | Sub of expr * expr
   | Div of expr * expr

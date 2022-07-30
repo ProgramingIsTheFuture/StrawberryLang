@@ -12,12 +12,6 @@ let rec expr_val = function
   | EOp v ->
     calculate_operator v
 and calculate_operator = function
-  | Neg (e1) ->
-    begin 
-      match e1 with
-      | CInt(v) -> CInt(v * -1)
-      | _ -> error "Failed to get negative value"
-    end
   | Add (e1, e2) -> 
     let v1 = expr_val e1 in
     let v2 = expr_val e2 in

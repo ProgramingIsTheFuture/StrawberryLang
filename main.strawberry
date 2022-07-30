@@ -5,6 +5,7 @@ strawberry(2 + 2)
 strawberry(2 % 2)
 
 strawberry(-15 + 10)
+strawberry("Hello " "World")
 
 🍓 strawberry(25, 30) 🍓 This will print on console "25 30"
 🍓 strawberry("Hello World", 53)

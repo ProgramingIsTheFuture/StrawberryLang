@@ -33,3 +33,10 @@ strawberry("Hello " + "World!") 🍓 This will print "Hello World!"
 | /    | Numbers, Int division. (Ex: 4 * 2 = 0)     |
 | %    | Numbers. (Ex: 4 % 2 = 0)     |
 
+#### Particular case
+  
+if the compilers gets something like
+```strawberry
+"Hello " "World" 🍓 This is equal to "Hello World"
+5 10 🍓 This is equal to 15
+```

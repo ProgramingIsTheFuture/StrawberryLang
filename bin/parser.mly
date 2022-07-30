@@ -9,7 +9,7 @@ expr:
     { EConst c }
   | LPARENT e1 = expr RPARENT
     { e1 }
-  | SUB e1 = expr
+  | SUB e1 = CST
     { EOp (Neg e1) }
   | e1 = expr ADD e2 = expr
     { EOp (Add (e1, e2)) }

@@ -14,7 +14,7 @@ let rec expr_val = function
 and calculate_operator = function
   | Neg (e1) ->
     begin 
-      match (expr_val e1) with
+      match e1 with
       | CInt(v) -> CInt(v * -1)
       | _ -> error "Failed to get negative value"
     end

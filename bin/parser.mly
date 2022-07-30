@@ -31,7 +31,7 @@ stmt:
     {
       match e2 with
       | Some v ->
-        SPrint ([e1] @ v)
+        SPrint (e1 :: v)
       | None ->
         SPrint [e1]
     }

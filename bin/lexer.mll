@@ -15,8 +15,13 @@ rule tokens = parse
     { comments lexbuf }
   | "strawberry" 
     { PRINT }
-  | ['0'-'9']+ as s
-    { CST (CInt (int_of_string s)) }
+  | ('-'? as n) [' ' '\t']? (['0'-'9']+ as s)
+    {
+      if n = "-" then
+        CST (CInt (-1 * int_of_string s))
+      else 
+        CST (CInt (int_of_string s)) 
+    }
   | '"'     
     { CST (CStr (string lexbuf)) }
   | ','
@@ -25,8 +30,6 @@ rule tokens = parse
     { LPARENT }
   | '+'
     { ADD }
-  | '-'
-    { SUB }
   | '/'
     { DIV }
   | '*'

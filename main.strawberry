@@ -1,3 +1,6 @@
+myvar = 10 + 5
+strawberry(myvar)
+
 strawberry(2 - 1)
 strawberry(2 / 1)
 strawberry(2 * 4)

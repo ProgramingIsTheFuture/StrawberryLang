@@ -22,6 +22,10 @@ rule tokens = parse
       else 
         CST (CInt (int_of_string s)) 
     }
+  | ['A'-'Z' 'a'-'z' '0'-'9' '_']+ as c
+    { NAME c }
+  | '='
+    { EQUAL }
   | '"'     
     { CST (CStr (string lexbuf)) }
   | ','

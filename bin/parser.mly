@@ -7,6 +7,8 @@
 expr:
   | c = CST
     { EConst c }
+  | c = NAME
+    {Evar c}
   | LPARENT e1 = expr RPARENT
     { e1 }
   | e1 = CST e2 = CST
@@ -33,6 +35,8 @@ stmt:
       | None ->
         SPrint [e1]
     }
+  | c = NAME EQUAL e1 = expr
+    { SDefine (c, e1) }
   | IGNORE
     { SIgnore }
 

@@ -7,7 +7,15 @@
 
 ### Strawberry CLI
 
-TO-DO
+if no parameters are given it will interpret line by line
+
+if any file is given it will instead interpret the file
+
+```bash
+# this will display the help you need
+# both -help and --help will work and display information
+strawberry -help
+```
 
 ### Strawberry Syntax
 
@@ -40,3 +48,19 @@ if the compilers gets something like
 "Hello " "World" 🍓 This is equal to "Hello World"
 5 10 🍓 This is equal to 15
 ```
+
+### Variables
+
+you can create variables with any of these patterns:
+
+- my_var
+- var2
+- Name_Var
+
+```strawberry
+myvar = 10
+myvar = (10 + 15 + 5) / 2
+var2 = "Hello World"
+strawberry(myvar, var2)
+```
+

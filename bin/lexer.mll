@@ -15,6 +15,10 @@ rule tokens = parse
     { comments lexbuf }
   | "strawberry" 
     { PRINT }
+  | "true"
+    { CST (CBool true) }
+  | "false"
+    { CST (CBool false) }
   | ('-'? as n) [' ' '\t']? (['0'-'9']+ as s)
     {
       if n = "-" then
@@ -26,6 +30,10 @@ rule tokens = parse
     { NAME c }
   | '='
     { EQUAL }
+  | '?'
+    { INTERROG }
+  | ':'
+    { DOUBLEDOT }
   | '"'     
     { CST (CStr (string lexbuf)) }
   | ','

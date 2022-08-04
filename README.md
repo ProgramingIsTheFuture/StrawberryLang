@@ -17,6 +17,24 @@ if any file is given it will instead interpret the file
 strawberry -help
 ```
 
+### Data types
+
+*Int*
+
+123
+
+25
+
+*Strings*
+
+"Hello World!"
+
+*Boolean*
+
+true
+
+false
+
 ### Strawberry Syntax
 
 Basic write to console:
@@ -63,4 +81,19 @@ myvar = (10 + 15 + 5) / 2
 var2 = "Hello World"
 strawberry(myvar, var2)
 ```
+
+### Conditions
+
+Ternary Operator
+
+```strawberry
+🍓 Condition ? statement : statement
+true ? strawberry("Hello") : strawberry("World")
+```
+
+### TO DO
+
+- [ ] compare conditions (==, <, ≤, >, >=)
+- [ ] If and Else statement
+- [ ] Loops
 

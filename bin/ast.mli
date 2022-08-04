@@ -2,6 +2,7 @@
 type constant = 
   | CInt of int
   | CStr of string
+  | CBool of bool
 
 type operator =
   | Add of expr * expr
@@ -17,6 +18,7 @@ and
 stmt =
   | SPrint of expr list
   | SDefine of string * expr
+  | SIf of expr * stmt list * stmt list
   | SIgnore
 
 type main = stmt list

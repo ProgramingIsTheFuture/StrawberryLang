@@ -5,6 +5,7 @@
 %token <Ast.constant> CST
 %token <string> NAME
 %token ADD DIV MUL MOD 
+%token DOUBLEDOT INTERROG
 
 %token EQUAL
 %token EOF

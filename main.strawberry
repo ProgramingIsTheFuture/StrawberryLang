@@ -13,3 +13,8 @@ strawberry("Hello " "World")
 🍓 strawberry(25, 30) 🍓 This will print on console "25 30"
 🍓 strawberry("Hello World", 53)
 🍓 this is a comment
+
+strawberry(true)
+
+false ? strawberry("Hello") : strawberry("World") 
+

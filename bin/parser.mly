@@ -37,6 +37,8 @@ stmt:
     }
   | c = NAME EQUAL e1 = expr
     { SDefine (c, e1) }
+  | e1 = expr INTERROG s1 = list(stmt) DOUBLEDOT s2 = list(stmt)
+    { SIf (e1, s1, s2) }
   | IGNORE
     { SIgnore }
 
